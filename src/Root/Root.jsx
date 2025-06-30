@@ -1,14 +1,16 @@
 import React from "react";
 import Navbar from "../Shared/Navbar/Navbar";
 import { Outlet } from "react-router";
+import Footer from "../Shared/Footer/Footer";
 
 const Root = () => {
   return (
-    <section>
+    <section className="">
       <Navbar></Navbar>
-      <div className="max-w-6xl mx-auto px-4">
+      <div className="max-w-6xl mx-auto px-4 mt-22">
         <Outlet></Outlet>
       </div>
+      <Footer></Footer>
     </section>
   );
 };

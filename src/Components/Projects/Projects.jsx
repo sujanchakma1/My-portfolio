@@ -5,7 +5,7 @@ import Projects3 from "./Projects3";
 
 const Projects = () => {
   return (
-    <div className="py-10">
+    <div className="pt-26 -mb-5" id="projects">
       <h1 className="text-5xl font-bold text-center">Projects</h1>
       <Projects1></Projects1>
       <Projects2></Projects2>

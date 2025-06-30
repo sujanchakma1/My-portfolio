@@ -1,63 +1,83 @@
 import React from "react";
-import Marquee from "react-fast-marquee";
 
-const skill = [
-  {
-    name: "HTML",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
-  },
-  {
-    name: "CSS3",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
-  },
-  {
-    name: "Tailwind CSS",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
-  },
-  {
-    name: "JavaScript",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
-  },
-  {
-    name: "React",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-  },
-  {
-    name: "Node.js",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
-  },
-  {
-    name: "Express.js",
-    icon: "https://i.ibb.co/vC4CYcWX/express-js.png",
-  },
-  {
-    name: "MongoDB",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
-  },
-  {
-    name: "Firebase",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg",
-  },
-];
+const skills = {
+  frontend: [
+    {
+      name: "HTML",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+    },
+    {
+      name: "CSS3",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+    },
+    {
+      name: "Tailwind CSS",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
+    },
+    {
+      name: "JavaScript",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+    },
+    {
+      name: "React",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+    },
+  ],
+  backend: [
+    {
+      name: "Node.js",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+    },
+    {
+      name: "Express.js",
+      icon: "https://i.ibb.co/vC4CYcWX/express-js.png",
+    },
+  ],
+  tools: [
+    {
+      name: "MongoDB",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
+    },
+    {
+      name: "Firebase",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg",
+    },
+  ],
+};
+
+const SkillCategory = ({ title, list }) => (
+  <div>
+    <h3 className="text-3xl font-bold mb-8">{title}</h3>
+    <div className="space-y-5">
+      {list.map((skill, index) => (
+        <div
+          key={index}
+          className="flex gap-2 items-center hover:scale-105 duration-200"
+        >
+          <img
+            src={skill.icon}
+            alt={skill.name}
+            className="w-10 h-10"
+          />
+          <p className="font-medium">{skill.name}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+);
+
 const Skills = () => {
   return (
-    <div className="py-10 bg-base-100 text-base-content">
-      <h2 className="text-5xl font-bold text-center mb-8">Skills</h2>
-      <Marquee speed={100}>
-        <div className="px-16 items-center text-center flex gap-32 my-10">
-          {skill.map((skill, index) => (
-            <div key={index} className="">
-              <img
-                src={skill.icon}
-                alt={skill.name}
-                className="w-16 h-16 mb-3"
-              />
-              <p className="text-lg font-semibold">{skill.name}</p>
-            </div>
-          ))}
+    <section id="skills" className="pt-26 -mb-5">
+      <div >
+        <h2 className="text-5xl font-bold text-center">Skills</h2>
+        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 text-center sm:text-left">
+          <SkillCategory title="Frontend" list={skills.frontend} />
+          <SkillCategory title="Backend" list={skills.backend} />
+          <SkillCategory title="Tools & Database" list={skills.tools} />
         </div>
-      </Marquee>
-    </div>
+      </div>
+    </section>
   );
 };
 

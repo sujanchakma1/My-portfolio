@@ -4,11 +4,9 @@ import { Link } from "react-router";
 
 const Logo = () => {
   return (
-    <Link to="/">
-      <div>
-        <img src={logo} alt="" className="w-18" />
-      </div>
-    </Link>
+    <div>
+      <img src={logo} alt="" className="w-18 " />
+    </div>
   );
 };
 
