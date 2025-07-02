@@ -71,7 +71,7 @@ const Skills = () => {
     <section id="skills" className="pt-26 -mb-5">
       <div >
         <h2 className="text-5xl font-bold text-center">Skills</h2>
-        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 text-center sm:text-left">
+        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
           <SkillCategory title="Frontend" list={skills.frontend} />
           <SkillCategory title="Backend" list={skills.backend} />
           <SkillCategory title="Tools & Database" list={skills.tools} />

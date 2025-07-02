@@ -1,6 +1,9 @@
 import React, { useRef } from "react";
 import emailjs from "emailjs-com";
 import Swal from "sweetalert2";
+import { AiOutlineMail } from "react-icons/ai";
+import { FaPhone } from "react-icons/fa";
+import { IoLogoGithub } from "react-icons/io";
 
 const Contact = () => {
   const form = useRef();
@@ -41,44 +44,59 @@ const Contact = () => {
       <div className="hero">
         <div className="hero-content flex-col lg:flex-row gap-10 w-full">
           {/* Contact Info */}
-          <div className="flex-1 border border-primary rounded-xl p-6 bg-primary text-white shadow-lg py-10">
+          <div className="flex-1 border border-primary rounded-xl p-6 bg-base-300 text-white shadow-lg py-10 space-y-5">
             <h2 className="text-2xl font-semibold mb-4">Contact Information</h2>
-            <div className="bg-black p-4 rounded-lg space-y-5">
-              <p>
-                <span className="font-semibold">Phone/WhatsApp : </span>{" "}
-                +8801571312226
-              </p>
-              <p>
-                <span className="font-semibold">Email :</span>{" "}
-                sujanckz926@gmail.com
-              </p>
+            <div className="flex gap-4 items-center">
+              <FaPhone size={18} />
+              <div>
+                <p className="font-semibold text-gray-400">Phone </p>{" "}
+                <p>01571312226</p>
+              </div>
+            </div>
+            <div className="flex gap-3 items-center">
+              <AiOutlineMail size={24} />
+              <div>
+                <p className="font-semibold text-gray-400">Email</p>
+                <p>sujanckz926@gmail.com</p>
+              </div>
+            </div>
+            <div className="flex gap-3 items-center">
+              <IoLogoGithub size={24} />
+              <div>
+                <p className="font-semibold text-gray-400">GitHub</p>
+                <p>https://github.com/sujanchakma1</p>
+              </div>
             </div>
           </div>
 
           {/* Contact Form */}
-          <div className="flex-1 border border-primary bg-primary rounded-xl p-6 shadow">
-            <form ref={form} onSubmit={sendEmail} className="space-y-4">
+          <div className="flex-1 border border-primary bg-base-300 rounded-xl p-6 shadow">
+            <h2 className="text-2xl font-semibold mb-4">Send Me a Message</h2>
+            <form ref={form} onSubmit={sendEmail} className="space-y-2">
+              <label className="label">Your Email <span className="text-red-400">*</span></label>
               <input
                 type="email"
                 name="user_email"
                 required
                 className="input input-bordered w-full rounded-md"
-                placeholder="Your Email"
+                placeholder="you@example.com"
               />
+              <label className="label">Subject <span className="text-red-400">*</span></label>
               <input
                 type="text"
                 name="subject"
                 required
                 className="input input-bordered w-full rounded-md"
-                placeholder="Subject"
+                placeholder="Subject about cooperation opportunities"
               />
+              <label className="label">Message <span className="text-red-400">*</span></label>
               <textarea
                 name="message"
                 required
                 className="textarea textarea-bordered w-full rounded-md"
-                placeholder="Your message..."
+                placeholder="Your detailed message here..."
               ></textarea>
-              <button type="submit" className="btn rounded-xl w-full">
+              <button type="submit" className="btn btn-primary rounded-xl w-full">
                 Send Message
               </button>
             </form>
