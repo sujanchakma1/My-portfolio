@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import emailjs from "emailjs-com";
 import Swal from "sweetalert2";
 import { AiOutlineMail } from "react-icons/ai";
-import { FaPhone } from "react-icons/fa";
+import { FaFacebook, FaPhone } from "react-icons/fa";
 import { IoLogoGithub } from "react-icons/io";
 
 const Contact = () => {
@@ -44,13 +44,13 @@ const Contact = () => {
       <div className="hero">
         <div className="hero-content flex-col lg:flex-row gap-10 w-full">
           {/* Contact Info */}
-          <div className="flex-1 border border-primary rounded-xl p-6 bg-base-300 text-white shadow-lg py-10 space-y-5">
+          <div className="flex-1 w-full border border-primary rounded-xl p-6 bg-base-300 text-white shadow-lg py-10 space-y-5">
             <h2 className="text-2xl font-semibold mb-4">Contact Information</h2>
             <div className="flex gap-4 items-center">
               <FaPhone size={18} />
               <div>
                 <p className="font-semibold text-gray-400">Phone </p>{" "}
-                <p>01571312226</p>
+                <p>+8801571312226</p>
               </div>
             </div>
             <div className="flex gap-3 items-center">
@@ -61,10 +61,10 @@ const Contact = () => {
               </div>
             </div>
             <div className="flex gap-3 items-center">
-              <IoLogoGithub size={24} />
+              <FaFacebook  size={24} />
               <div>
-                <p className="font-semibold text-gray-400">GitHub</p>
-                <p>https://github.com/sujanchakma1</p>
+                <p className="font-semibold text-gray-400">Facebook</p>
+                <a href="https://www.facebook.com/share/1LL4u1yggP/">SUJAN CHAKMA</a>
               </div>
             </div>
           </div>

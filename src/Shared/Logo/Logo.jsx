@@ -1,13 +1,10 @@
 import React from "react";
-import logo from "../../assets/Logo/logo.png";
 import { Link } from "react-router";
 
 const Logo = () => {
   return (
     <Link to="/">
-      <div>
-        <img src={logo} alt="" className="w-18 " />
-      </div>
+      <p className="font-bold text-xl" >&lt; <span className="patua-font ">Sujan</span>  <span className="text-[#7976b4]"> /&gt;</span></p>
     </Link>
   );
 };

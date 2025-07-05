@@ -16,7 +16,7 @@ const Projects2 = () => {
   const images = [image1, image2, image3, image4, image5, image6];
 
   return (
-    <div className="hero border-2 border-dashed border-gray-600 rounded-xl my-10">
+    <div className="hero bg-base-300 border border-primary rounded-xl my-10">
       <div className="hero-content flex-col lg:flex-row gap-8">
         <div className="h-96 w-full lg:w-[400px] overflow-y-auto rounded-box snap-y snap-mandatory scroll-smooth space-y-4">
           {images.map((image, index) => (

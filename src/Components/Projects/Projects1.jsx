@@ -1,10 +1,11 @@
 import React from "react";
-import image1 from "../../assets/projects-1/Screenshot (226).png";
-import image2 from "../../assets/projects-1/Screenshot (227).png";
-import image3 from "../../assets/projects-1/Screenshot (228).png";
-import image4 from "../../assets/projects-1/Screenshot (229).png";
-import image5 from "../../assets/projects-1/Screenshot (230).png";
-import image6 from "../../assets/projects-1/Screenshot (231).png";
+import image1 from "../../assets/projects-1/Screenshot (269).png";
+import image2 from "../../assets/projects-1/Screenshot (270).png";
+import image3 from "../../assets/projects-1/Screenshot (271).png";
+import image4 from "../../assets/projects-1/Screenshot (272).png";
+import image5 from "../../assets/projects-1/Screenshot (273).png";
+import image6 from "../../assets/projects-1/Screenshot (274).png";
+import image7 from "../../assets/projects-1/Screenshot (275).png";
 import logo from "../../assets/projects-1/Logo/Logo.png";
 import { TbDetails, TbWorld } from "react-icons/tb";
 import { IoLogoGithub } from "react-icons/io";
@@ -13,10 +14,10 @@ import { IoLogoFirebase } from "react-icons/io5";
 import { SiExpress, SiMongodb } from "react-icons/si";
 
 const Projects1 = () => {
-  const images = [image1, image2, image3, image4, image5, image6];
+  const images = [image1, image2, image3, image4, image5, image6,image7];
 
   return (
-    <div className="hero border-dashed border-2 border-gray-600 rounded-xl my-10">
+    <div className="hero bg-base-300 border border-primary rounded-xl my-10">
       <div className="hero-content flex-col lg:flex-row gap-8">
         <div className="h-96 w-full lg:w-[400px] overflow-y-auto rounded-box snap-y snap-mandatory scroll-smooth space-y-4">
           {images.map((image, index) => (
