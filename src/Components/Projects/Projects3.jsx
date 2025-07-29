@@ -1,75 +1,68 @@
-import image1 from "../../assets/projects-3/Screenshot (238).png";
-import image2 from "../../assets/projects-3/Screenshot (239).png";
-import image3 from "../../assets/projects-3/Screenshot (240).png";
-import image4 from "../../assets/projects-3/Screenshot (241).png";
-import image5 from "../../assets/projects-3/Screenshot (242).png";
+import image1 from "../../assets/projects-3/Screenshot (311).png";
 import { TbDetails, TbWorld } from "react-icons/tb";
-import { IoLogoCss3, IoLogoGithub, IoLogoJavascript } from "react-icons/io";
-import { FaHtml5, FaReact } from "react-icons/fa";
+import { IoLogoGithub } from "react-icons/io";
+import { FaNode, FaReact } from "react-icons/fa";
+import Logo from "./project3-logo/Logo";
+import { SiExpress, SiMongodb, SiReactquery, SiStripe } from "react-icons/si";
+import { IoLogoFirebase } from "react-icons/io5";
 
 const Projects3 = () => {
-  const images = [image1, image2, image3, image4, image5];
-
   return (
     <div className="hero bg-base-300 border border-primary rounded-xl my-10">
       <div className="hero-content flex-col lg:flex-row gap-8">
-        <div className="h-96 w-full lg:w-[400px] overflow-y-auto rounded-box snap-y snap-mandatory scroll-smooth space-y-4">
-          {images.map((image, index) => (
-            <div
-              key={index}
-              className="carousel-item h-64 snap-center overflow-hidden rounded-xl shadow"
-            >
-              <img src={image} className="w-full h-full object-cover" />
-            </div>
-          ))}
+        <div className="h-full w-full lg:w-[500px]">
+          <img src={image1} className="w-full h-full object-cover rounded-md" />
         </div>
 
         {/* ✅ Project Description */}
-        <div className="flex-1 space-y-4">
-          <div className="flex items-center gap-3">
-            <img
-              className="w-8"
-              src="https://i.ibb.co.com/60jXdQQY/logo.png"
-              alt=""
-            />
-            <h1 className="text-3xl font-bold">Doctor-Phudu</h1>
-          </div>
-          <p className="py-2 text-lg">
-            Doctor-Phudu is an online doctor appointment platform where users
-            can easily book or cancel appointments, view available doctors, and
-            check their profiles and specializations in one place.
+        <div className="flex-1">
+          <Logo></Logo>
+          <p className="text-lg mb-1">
+            A MERN stack web application that helps organizers create and manage medical camps, and allows participants to join those camps, make payments, and access health resources.
           </p>
-          <p>-- Book & Cancel Appointments </p>
-          <p>-- View Available Doctors </p>
-          <p>-- Doctor Profile & Details </p>
-          <div className="space-x-3 ">
-            <div className="badge badge-info rounded-md">
-              <FaHtml5 />
-              HTML5
-            </div>
-            <div className="badge badge-info rounded-md">
-              <IoLogoCss3 />
-              CSS3
-            </div>
-            <div className="badge badge-info rounded-md">
-              <IoLogoJavascript />
-              JavaScript
-            </div>
+          <p>-- Medical Camp Registration & Management System</p>
+          <p>-- Participant Registration with Stripe Payment Integration</p>
+          <p>-- Role-Based Dashboard with Activity Tracking</p>
+          <div className="space-x-3 my-3">
             <div className="badge badge-info rounded-md">
               <FaReact />
               React
             </div>
+            <div className="badge badge-info rounded-md">
+              <IoLogoFirebase />
+              Firebase
+            </div>
+            <div className="badge badge-info rounded-md">
+              <FaNode />
+              Node.js
+            </div>
+            <div className="badge badge-info rounded-md">
+              <SiExpress/>
+              Express.js
+            </div>
+            <div className="badge badge-info rounded-md">
+              <SiMongodb />
+              MongoDB
+            </div>
+            <div className="badge badge-info rounded-md">
+              <SiReactquery/>
+              TanStack Query
+            </div>
+            <div className="badge badge-info rounded-md">
+              <SiStripe />
+              Stripe Payment
+            </div>
           </div>
           <div className="flex gap-5">
             <a
-              href="https://doctor-talk.surge.sh/"
-              className="btn btn-sm md:btn-md btn-primary rounded-xl"
+              href="https://medical-center-camp.web.app"
+              className="btn btn-sm btn-primary rounded-xl"
             >
               Live Site <TbWorld size={18} />
             </a>
             <a
-              href="https://github.com/sujanchakma1/Doctor-phudu"
-              className="btn btn-sm md:btn-md btn-primary rounded-xl"
+              href="#"
+              className="btn btn-sm btn-primary rounded-xl"
             >
               GitHub <IoLogoGithub size={18} />
             </a>
@@ -77,7 +70,7 @@ const Projects3 = () => {
               onClick={() =>
                 document.getElementById("doctor_phudu").showModal()
               }
-              className="btn btn-sm md:btn-md btn-primary rounded-xl"
+              className="btn btn-sm btn-primary rounded-xl"
             >
               Details <TbDetails size={18} />
             </button>
@@ -92,14 +85,7 @@ const Projects3 = () => {
               </button>
             </form>
             <div className=" py-10 px-4 text-base-content">
-              <div className="flex items-center gap-3 mb-3">
-                <img
-                  className="w-8"
-                  src="https://i.ibb.co.com/60jXdQQY/logo.png"
-                  alt=""
-                />
-                <h1 className="text-3xl font-bold">Doctor-Phudu</h1>
-              </div>
+              <Logo></Logo>
 
               {/* Technologies Used */}
               <section className="mb-6">
@@ -107,17 +93,14 @@ const Projects3 = () => {
                   <span className="text-2xl font-semibold ">
                     Technologies :
                   </span>{" "}
-                  React JS, Tailwind CSS
+                  React JS, Firebase Authentication & Hosting, Node.js, MongoDB, Stripe Payment
                 </h2>
               </section>
 
               {/* Description */}
               <section className="mb-6">
                 <p>
-                  Doctor-Phudu is an online doctor appointment platform where
-                  users can easily book or cancel appointments, view available
-                  doctors, and check their profiles and specializations in one
-                  place.
+                  A MERN stack web application that helps organizers create and manage medical camps, and allows participants to join those camps, make payments, and access health resources.
                 </p>
               </section>
 
@@ -127,23 +110,22 @@ const Projects3 = () => {
                   <li>
                     Live Website:{" "}
                     <a
-                      href="https://doctor-talk.surge.sh/"
+                      href="https://medical-center-camp.web.app/"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-blue-500 underline"
                     >
-                      https://doctor-talk.surge.sh/
+                      https://medical-center-camp.web.app
                     </a>
                   </li>
                   <li>
                     GitHub Repository (Client):{" "}
                     <a
-                      href="https://github.com/sujanchakma1/Doctor-phudu"
+                      href="#"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-blue-500 underline"
                     >
-                      https://github.com/sujanchakma1/Doctor-phudu
                     </a>
                   </li>
                 </ul>
@@ -151,7 +133,7 @@ const Projects3 = () => {
               {/* Future Plans */}
               <section>
                 <h2 className="text-2xl font-semibold mb-2">
-                   Future Improvements
+                  Future Improvements
                 </h2>
                 <ul className="list-disc list-inside ml-4 space-y-1">
                   <li>Integrate video consultation or chat feature</li>

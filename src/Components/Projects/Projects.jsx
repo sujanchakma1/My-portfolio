@@ -7,9 +7,9 @@ const Projects = () => {
   return (
     <div className="pt-26 -mb-5" id="projects">
       <h1 className="text-5xl font-bold text-center">Projects</h1>
+      <Projects3></Projects3>
       <Projects1></Projects1>
       <Projects2></Projects2>
-      <Projects3></Projects3>
     </div>
   );
 };

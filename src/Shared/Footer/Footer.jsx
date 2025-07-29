@@ -7,7 +7,7 @@ const Footer = () => {
     <footer className="footer footer-horizontal footer-center bg-primary text-primary-content mt-20 py-5">
       <div>
         <p>
-          © {new Date().getFullYear()} <a href="https://www.facebook.com/share/1LL4u1yggP/" className="underline link-hover font-semibold text-blue-300">SUJAN</a> | MERN Stack Developer. - All right
+          © {new Date().getFullYear()} <a href="www.linkedin.com/in/sujan99" className="underline link-hover font-semibold text-blue-300">SUJAN</a> | MERN Stack Developer. - All right
           reserved
         </p>
       </div>
