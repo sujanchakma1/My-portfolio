@@ -4,6 +4,7 @@ import { FaWhatsapp } from "react-icons/fa";
 import { LuDownload, LuGithub } from "react-icons/lu";
 import { SlSocialLinkedin } from "react-icons/sl";
 import Typewriter from "./Typewriter";
+import { Link } from "react-scroll";
 
 const Hero = () => {
   return (
@@ -24,7 +25,7 @@ const Hero = () => {
           </p>
           <div className="flex justify-center">
             <div className="flex gap-5">
-              <a href="https://www.facebook.com/share/1LL4u1yggP/">
+              <a href="https://wa.me/8801571312226">
                 <FaWhatsapp size={28} />
               </a>
               <a href="https://github.com/sujanchakma1">
@@ -36,7 +37,11 @@ const Hero = () => {
             </div>
           </div>
           <div className="space-x-5">
-            <button className="btn btn-outline btn-primary rounded-full">View My Projects</button>
+            <Link to="projects" smooth={true} duration={500}>
+              <button className="btn btn-outline btn-primary rounded-full">
+                View My Projects
+              </button>
+            </Link>
             <a
               href="/resume.pdf"
               download="Sujan_Chakma_Resume.pdf"

@@ -4,7 +4,7 @@ import { IoLogoGithub } from "react-icons/io";
 
 const Projects1 = () => {
   return (
-    <div className=" bg-base-300 border border-primary rounded-xl my-10">
+    <div className="border border-gray-700 rounded-xl my-10">
       <div className="group">
         <div className="h-full overflow-hidden p-1">
           <img
@@ -16,11 +16,13 @@ const Projects1 = () => {
         {/* ✅ Project Description */}
         <div className="p-5 space-y-4">
           <h2 className="text-3xl font-bold text-center"> MedCamp</h2>
-          <p className="text-md text-center line-clamp-3">
+          <p className="text-sm text-center line-clamp-3">
             A MERN stack web application that helps organizers create and manage
             medical camps, and allows participants to join those camps, make
             payments, and access health resources.
           </p>
+
+          <h2 className="text-md font-semibold mb-1">Technologies are use :</h2>
           <div className="flex flex-wrap gap-2">
             <div className="px-2 py-1 text-xs font-medium border rounded-full bg-secondary text-secondary-foreground">
               React
@@ -44,7 +46,7 @@ const Projects1 = () => {
               Stripe Payment
             </div>
           </div>
-          <div className="flex gap-5 justify-end">
+          <div className="flex gap-2">
             <a
               href="https://medical-center-camp.web.app"
               className="btn btn-sm btn-primary rounded-full"
@@ -73,11 +75,11 @@ const Projects1 = () => {
               </button>
             </form>
             <div className=" py-10 px-4 text-base-content">
-              <h2 className="text-3xl font-bold"> MedCamp</h2>
+              <h2 className="text-3xl font-bold text-center mb-2"> MedCamp</h2>
 
               {/* Technologies Used */}
               <section className="mb-6">
-                <h2 className="text-lg">
+                <h2 className="text-sm">
                   <span className="text-2xl font-semibold ">
                     Technologies :
                   </span>{" "}
@@ -86,10 +88,19 @@ const Projects1 = () => {
                 </h2>
               </section>
 
+              <div>
+                <h2 className="text-2xl font-semibold mb-2">Description</h2>
+                <p className="text-sm mb-2">
+                  A MERN stack web application that helps organizers create and
+                  manage medical camps, and allows participants to join those
+                  camps, make payments, and access health resources.
+                </p>
+              </div>
+
               {/* major feature*/}
               <section>
                 <h2 className="text-2xl font-semibold mb-2">Major Featured</h2>
-                <ul className="list-disc list-inside ml-4 space-y-1">
+                <ul className="list-disc list-inside ml-4 space-y-1 text-sm">
                   <li>Medical Camp Registration & Management System</li>
                   <li>
                     Participant Registration with Stripe Payment Integration
@@ -103,7 +114,7 @@ const Projects1 = () => {
                 <h2 className="text-2xl font-semibold mb-2">
                   Future Improvements
                 </h2>
-                <ul className="list-disc list-inside ml-4 space-y-1">
+                <ul className="list-disc list-inside ml-4 space-y-1 text-sm">
                   <li>Integrate video consultation or chat feature</li>
                   <li>Allow patients to review and rate doctors</li>
                   <li>Add doctor dashboard to manage appointments</li>

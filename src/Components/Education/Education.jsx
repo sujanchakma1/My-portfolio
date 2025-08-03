@@ -21,7 +21,7 @@ const Education = () => {
   return (
     <div id="education" className="pt-20 px-4">
       <h1 className="text-5xl font-bold text-center mb-10">Education</h1>
-      <div className="space-y-6 max-w-5xl mx-auto relative">
+      <div className="space-y-6  relative">
         <div className="absolute left-2 top-1 h-full w-1 bg-gradient-to-b from-primary to-secondary rounded"></div>
         {educationData.map((edu, index) => (
           <div key={index} className="pl-12">

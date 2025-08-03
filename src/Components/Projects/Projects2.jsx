@@ -5,7 +5,7 @@ import { IoLogoGithub } from "react-icons/io";
 
 const Projects2 = () => {
   return (
-    <div className="bg-base-300 border border-primary rounded-xl my-10">
+    <div className="border border-gray-700 rounded-xl my-10">
       <div className="group">
         <div className="h-full overflow-hidden p-1">
           <img
@@ -17,12 +17,13 @@ const Projects2 = () => {
         {/* ✅ Project Description */}
         <div className="p-5 space-y-4">
           <h2 className="text-3xl font-bold text-center">ItemsTrack</h2>
-          <p className="text-md text-center line-clamp-3">
+          <p className="text-sm text-center line-clamp-3">
             ItemsTrack is a simple lost and found item tracking website where
             users can post lost or found items with details and images. It helps
             people reconnect with their lost belongings easily.
           </p>
 
+          <h2 className="text-md font-semibold mb-1">Technologies are use :</h2>
           <div className="flex flex-wrap gap-2 my-3">
             <div className="px-2 py-1 text-xs font-medium border rounded-full bg-secondary text-secondary-foreground">
               React
@@ -43,7 +44,7 @@ const Projects2 = () => {
               JWT
             </div>
           </div>
-          <div className="flex gap-5 justify-end">
+          <div className="flex gap-2">
             <a
               href="https://where-is-it-88c14.web.app/"
               className="btn btn-sm btn-primary rounded-full"
@@ -73,22 +74,31 @@ const Projects2 = () => {
               </button>
             </form>
             <div className=" py-10 px-4 text-base-content">
-              <div className="flex items-center mb-3">
-                <h2 className="font text-3xl font-bold">Items Track</h2>
+              <div className="flex items-center mb-2">
+                <h2 className="font text-3xl font-bold text-center">ItemsTrack</h2>
               </div>
 
               {/* Technologies Used */}
-              <section className="mb-6">
-                <h2 className="text-lg">
+              <section className="mb-6 ">
+                <h2 className="text-sm">
                   <span className="font-semibold text-2xl">Technologies :</span>{" "}
                   React JS, Firebase Authentication & Hosting, Node.js, MongoDB
                 </h2>
               </section>
+              <div>
+                <h2 className="text-2xl font-semibold mb-2">Description</h2>
+                <p className="text-sm mb-2">
+                  ItemsTrack is a simple lost and found item tracking website
+                  where users can post lost or found items with details and
+                  images. It helps people reconnect with their lost belongings
+                  easily.
+                </p>
+              </div>
 
               {/* Major feature */}
               <section>
                 <h2 className="text-2xl font-semibold mb-2">Major Feature</h2>
-                <ul className="list-disc list-inside ml-4 space-y-1">
+                <ul className="list-disc list-inside ml-4 space-y-1 text-sm">
                   <li>Lost & Found Posting</li>
                   <li>Smart Search & Filter </li>
                   <li>Item Recovery Matching </li>
@@ -100,7 +110,7 @@ const Projects2 = () => {
                 <h2 className="text-2xl font-semibold mb-2">
                   Future Improvements
                 </h2>
-                <ul className="list-disc list-inside ml-4 space-y-1">
+                <ul className="list-disc list-inside ml-4 space-y-1 text-sm">
                   <li>Adding advanced search and filtering options</li>
                   <li>
                     Implementing email/notification alerts for found items

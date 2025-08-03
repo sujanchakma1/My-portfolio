@@ -43,7 +43,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="pt-26 -mb-5 text-base-content" id="contacts">
+    <div className="pt-26 px-4 -mb-5 text-base-content" id="contacts">
       <h1 className="text-5xl font-bold text-center">Get In touch</h1>
       <p className="font-medium text-center pt-5 max-w-3xl mx-auto mb-8">
         Have a project in mind or want to collaborate? Feel free to reach out.
@@ -78,9 +78,9 @@ const Contact = () => {
               </div>
             </div>
             <div>
-              <h2 className="text-2xl font-semibold mb-4">Contact With Me</h2>
+              <h2 className="text-2xl font-semibold mb-4">Find On Me</h2>
               <div className="flex gap-5">
-                <a href="https://www.facebook.com/share/1LL4u1yggP/">
+              <a href="https://wa.me/8801571312226">
                   <FaWhatsapp size={28} />
                 </a>
                 <a href="https://github.com/sujanchakma1">

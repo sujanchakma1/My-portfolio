@@ -1,6 +1,7 @@
 import React from "react";
 import { FaCode, FaPaintBrush, FaRegLightbulb } from "react-icons/fa";
 import { LuDownload } from "react-icons/lu";
+import { Link } from "react-scroll";
 
 const services = [
   {
@@ -39,9 +40,11 @@ const About = () => {
             at the forefront of the ever-evolving web landscape.
           </p>
           <div className="space-x-5">
-            <button className="btn btn-outline btn-primary rounded-full">
-              Get in Touch
-            </button>
+            <Link to="contacts" smooth={true} duration={500}>
+              <button className="btn btn-outline btn-primary rounded-full">
+                Get in Touch
+              </button>
+            </Link>
             <a
               href="/resume.pdf"
               download="Sujan_Chakma_Resume.pdf"
