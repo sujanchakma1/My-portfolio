@@ -1,82 +1,139 @@
-import React from "react";
+import React, { useState } from "react";
 
 const skills = {
   frontend: [
     {
-      name: "HTML",
+      name: "HTML5",
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+      percentage: 85,
     },
     {
       name: "CSS3",
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+      percentage: 85,
     },
     {
       name: "Tailwind CSS",
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
+      percentage: 90,
     },
     {
       name: "JavaScript",
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+      percentage: 80,
     },
     {
       name: "React",
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+      percentage: 90,
+    },
+    {
+      name: "Next.Js",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg",
+      percentage: 65,
     },
   ],
   backend: [
     {
       name: "Node.js",
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+      percentage: 80,
     },
     {
       name: "Express.js",
       icon: "https://i.ibb.co/vC4CYcWX/express-js.png",
+      percentage: 75,
+    },
+    {
+      name: "MongoDB",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
+      percentage: 90,
     },
   ],
   tools: [
     {
-      name: "MongoDB",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
-    },
-    {
       name: "Firebase",
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg",
+      percentage: 80,
     },
     {
-      name: "GitHub",
-      icon: "https://i.ibb.co/Cpg4vghW/icons8-github-64.png"
-    }
+      name: "Figma",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg",
+      percentage: 70,
+    },
+    {
+      name: "Git/GitHub",
+      icon: "https://i.ibb.co/Cpg4vghW/icons8-github-64.png",
+      percentage: 90,
+    },
+    {
+      name: "VS Code",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg",
+      percentage: 95,
+    },
   ],
 };
 
-const SkillCategory = ({ title, list }) => (
-  <div className="bg-base-300 border border-primary rounded-md py-5">
-    <h3 className="text-3xl font-bold mb-8 text-center">{title}</h3>
-    <div className="space-y-5 flex justify-center">
-      <div className="grid grid-cols-3 gap-5">
-        {list.map((skill, index) => (
-          <div
-            key={index}
-            className="items-center  hover:scale-105 duration-200"
-          >
-            <img src={skill.icon} alt={skill.name} className="w-10 h-10 items-center" />
-            <p className="font-medium">{skill.name}</p>
-          </div>
-        ))}
-      </div>
-    </div>
-  </div>
-);
-
 const Skills = () => {
+  const [filter, setFilter] = useState("all");
+
+  const allSkills = [
+    ...skills.frontend.map((s) => ({ ...s, category: "frontend" })),
+    ...skills.backend.map((s) => ({ ...s, category: "backend" })),
+    ...skills.tools.map((s) => ({ ...s, category: "tools" })),
+  ];
+
+  const filteredSkills =
+    filter === "all"
+      ? allSkills
+      : allSkills.filter((skill) => skill.category === filter);
+
   return (
-    <section id="skills" className="pt-26 -mb-5">
-      <div>
-        <h2 className="text-5xl font-bold text-center">Skills</h2>
-        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
-          <SkillCategory title="Frontend" list={skills.frontend} />
-          <SkillCategory title="Backend" list={skills.backend} />
-          <SkillCategory title="Tools & Database" list={skills.tools} />
+    <section id="skills" className="py-16 bg-base-200">
+      <div className=" px-4">
+        <h2 className="text-5xl font-bold text-center mb-8">Skills</h2>
+
+        {/* Filter Buttons */}
+        <div className="flex flex-wrap justify-center gap-4 mb-10">
+          {["all", "frontend", "backend", "tools"].map((cat) => (
+            <button
+              key={cat}
+              className={`btn px-5 capitalize rounded-full ${
+                filter === cat ? "btn-primary" : "btn-outline btn-primary"
+              }`}
+              onClick={() => setFilter(cat)}
+            >
+              {cat}
+            </button>
+          ))}
+        </div>
+
+        {/* Skills Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {filteredSkills.map((skill, index) => (
+            <div
+              key={index}
+              className="border border-gray-700 shadow-md p-4 rounded-lg hover:scale-102 transition-all"
+            >
+              <div className="flex items-center gap-3 mb-3">
+                <img
+                  src={skill.icon}
+                  alt={skill.name}
+                  className="w-8 h-8 object-contain"
+                />
+                <h3 className="font-semibold text-lg">{skill.name}</h3>
+                <span className="ml-auto text-sm font-medium">
+                  {skill.percentage}%
+                </span>
+              </div>
+              <div className="w-full bg-gray-200 h-2 rounded-full">
+                <div
+                  className="h-2 bg-gradient-to-r from-pink-600 to-purple-600 rounded-full"
+                  style={{ width: `${skill.percentage}%` }}
+                ></div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

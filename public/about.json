@@ -1,0 +1,18 @@
+
+[
+  {
+    "icon": "FaCode",
+    "title": "Web Development",
+    "description": "Building responsive and dynamic websites using modern technologies like HTML, CSS, JavaScript, React, and Node.js."
+  },
+  {
+    "icon": "FaPaintBrush",
+    "title": "UI/UX Design",
+    "description": "Designing clean and intuitive user interfaces with a focus on user experience, accessibility, and aesthetics."
+  },
+  {
+    "icon": "FaRegLightbulb",
+    "title": "Best Practices & Guidelines",
+    "description": "Following industry-standard coding guidelines and UI/UX principles to ensure consistency, maintainability, and scalability."
+  }
+]

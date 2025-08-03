@@ -6,10 +6,16 @@ import Projects3 from "./Projects3";
 const Projects = () => {
   return (
     <div className="pt-26 -mb-5" id="projects">
-      <h1 className="text-5xl font-bold text-center">Projects</h1>
-      <Projects3></Projects3>
-      <Projects1></Projects1>
-      <Projects2></Projects2>
+      <h1 className="text-5xl font-bold text-center"> Featured Projects</h1>
+      <p className="font-medium text-center pt-5 max-w-3xl mx-auto">
+        Here are some of my recent projects. Each project was carefully crafted
+        with attention to detail, performance, and user experience.
+      </p>
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <Projects1></Projects1>
+        <Projects2></Projects2>
+        <Projects3></Projects3>
+      </div>
     </div>
   );
 };

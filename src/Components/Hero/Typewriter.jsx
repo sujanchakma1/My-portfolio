@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 
 const Typewriter = ({
-  texts = ["Front-End Developer", "MERN Stack Enthusiast"],
+  texts = ["Web Developer.","Front End Developer.", "MERN Stack Developer.", "React Developer."],
   speed = 100,
   delay = 1500,
   className = "",
@@ -42,7 +42,7 @@ const Typewriter = ({
 
   return (
     <p className={`inline-block ${className}`}>
-      {text}
+      I'm a {text}
       <span className="animate-pulse text-white"> |</span>
     </p>
   );

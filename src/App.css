@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Patua+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap');
 
 @import "tailwindcss";
 @plugin "daisyui";
@@ -9,10 +9,11 @@
   default: false;
   
 }
-
-.patua-font {
-  font-family: "Patua One", serif;
+.parkinsans-font {
+  font-family: "Parkinsans", sans-serif;
 }
+
+
 
 
 

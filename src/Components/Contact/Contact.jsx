@@ -2,8 +2,12 @@ import React, { useRef } from "react";
 import emailjs from "emailjs-com";
 import Swal from "sweetalert2";
 import { AiOutlineMail } from "react-icons/ai";
-import { FaPhone } from "react-icons/fa";
+import { FaPhone, FaWhatsapp } from "react-icons/fa";
 import { IoLocationOutline } from "react-icons/io5";
+import { LuGithub } from "react-icons/lu";
+import { SlSocialLinkedin } from "react-icons/sl";
+import { FiSend } from "react-icons/fi";
+
 
 const Contact = () => {
   const form = useRef();
@@ -40,40 +44,62 @@ const Contact = () => {
 
   return (
     <div className="pt-26 -mb-5 text-base-content" id="contacts">
-      <h1 className="text-4xl font-bold text-center mb-10">Contact Me</h1>
+      <h1 className="text-5xl font-bold text-center">Get In touch</h1>
+      <p className="font-medium text-center pt-5 max-w-3xl mx-auto mb-8">
+        Have a project in mind or want to collaborate? Feel free to reach out.
+        I'm always open to discussing new opportunities.
+      </p>
       <div className="hero">
-        <div className="hero-content flex-col lg:flex-row gap-10">
+        <div className="hero-content flex-col lg:flex-row items-start gap-8">
           {/* Contact Info */}
-          <div className="flex-1 w-full border border-primary rounded-xl p-6 bg-base-300 text-white shadow-lg py-10 space-y-5">
-            <h2 className="text-2xl font-semibold mb-4">Contact Information</h2>
+          <div className="flex-1 w-full border border-gray-700 rounded-xl p-6 shadow-lg py-10 space-y-5">
+            <h2 className="text-2xl font-semibold mb-4 text-center">
+              Contact Information
+            </h2>
             <div className="flex gap-4 items-center">
               <FaPhone size={18} />
               <div>
-                <p className="font-semibold text-gray-400">Phone </p>{" "}
-                <p className="font-bold">+8801571312226</p>
+                <p className="font-semibold text-gray-400">Phone/WhatsApp </p>{" "}
+                <p className="font-semibold">+8801571312226</p>
               </div>
             </div>
             <div className="flex gap-3 items-center">
               <AiOutlineMail size={24} />
               <div>
                 <p className="font-semibold text-gray-400">Email</p>
-                <p className="font-bold">sujanckz926@gmail.com</p>
+                <p className="font-semibold">sujanckz926@gmail.com</p>
               </div>
             </div>
             <div className="flex gap-3 items-center">
               <IoLocationOutline size={24} />
               <div>
                 <p className="font-semibold text-gray-400">Location</p>
-                <p className="font-bold">Chattogram, Bangladesh</p>
+                <p className="font-semibold">Chattogram, Bangladesh</p>
+              </div>
+            </div>
+            <div>
+              <h2 className="text-2xl font-semibold mb-4">Contact With Me</h2>
+              <div className="flex gap-5">
+                <a href="https://www.facebook.com/share/1LL4u1yggP/">
+                  <FaWhatsapp size={28} />
+                </a>
+                <a href="https://github.com/sujanchakma1">
+                  <LuGithub size={28} />
+                </a>
+                <a href="https://www.linkedin.com/in/sujan99">
+                  <SlSocialLinkedin size={28} />
+                </a>
               </div>
             </div>
           </div>
 
           {/* Contact Form */}
-          <div className="flex-1 border border-primary bg-base-300 rounded-xl p-6 shadow">
-            <h2 className="text-2xl font-semibold mb-4">Send Me a Message</h2>
+          <div className="flex-1 w-full border border-gray-700 rounded-xl p-6 shadow">
+            <h2 className="text-2xl font-semibold mb-4 text-center">Send Me a Message</h2>
             <form ref={form} onSubmit={sendEmail} className="space-y-2">
-              <label className="label font-semibold">Your Email <span className="text-red-400">*</span></label>
+              <label className="label font-semibold">
+                Your Email <span className="text-red-400">*</span>
+              </label>
               <input
                 type="email"
                 name="user_email"
@@ -81,7 +107,9 @@ const Contact = () => {
                 className="input input-bordered w-full rounded-md"
                 placeholder="you@example.com"
               />
-              <label className="label font-semibold">Subject <span className="text-red-400">*</span></label>
+              <label className="label font-semibold">
+                Subject <span className="text-red-400">*</span>
+              </label>
               <input
                 type="text"
                 name="subject"
@@ -89,15 +117,20 @@ const Contact = () => {
                 className="input input-bordered w-full rounded-md"
                 placeholder="Subject about cooperation opportunities"
               />
-              <label className="label font-semibold">Message <span className="text-red-400">*</span></label>
+              <label className="label font-semibold">
+                Message <span className="text-red-400">*</span>
+              </label>
               <textarea
                 name="message"
                 required
                 className="textarea textarea-bordered w-full rounded-md"
                 placeholder="Your detailed message here..."
               ></textarea>
-              <button type="submit" className="btn btn-primary rounded-xl w-full">
-                Send Message
+              <button
+                type="submit"
+                className="btn btn-primary rounded-full w-full"
+              >
+                <FiSend size={18} /> Send Message
               </button>
             </form>
           </div>

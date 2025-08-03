@@ -1,25 +1,43 @@
 import React from "react";
+import { FaGraduationCap } from "react-icons/fa";
+
+const educationData = [
+  {
+    degree: "Diploma in Computer Science & Technology",
+    institution: "Chittagong Polytechnic Institute",
+    duration: "2023 - Current",
+    description:
+      "Studying core subjects including Data Structures, Web Development, and Software Engineering. Passionate about building real-world projects and solving problems through technology.",
+  },
+  {
+    degree: "Secondary School Certificate",
+    institution: "Banchara High School",
+    duration: "2020 - 2022",
+    description: "Major in Arts. Achieved GPA 4.39.",
+  },
+];
 
 const Education = () => {
   return (
-    <div id="education" className="pt-26 -mb-5">
-      <h1 className="text-5xl font-bold text-center">Education</h1>
-      <div className="space-y-4 text-lg leading-relaxed my-10">
-        <p>
-          I am currently a{" "}
-          <strong>3rd year student of Computer Science & Technology</strong> at{" "}
-          <strong>Chittagong Polytechnic Institute (CPI)</strong>, one of the
-          most reputed technical institutes in Bangladesh. My academic journey
-          began in 2023, and I am expected to complete my diploma by{" "}
-          <strong>early 2027</strong>.
-        </p>
-        <p>
-          At <strong>Chittagong Polytechnic Institute (CPI)</strong>, I have gained strong foundational knowledge in both
-          theoretical and practical aspects of computing — including web
-          development, data structures, programming, and database systems. My
-          learning environment is highly project-based, which has helped me
-          develop real-world skills and problem-solving abilities.
-        </p>
+    <div id="education" className="pt-20 px-4">
+      <h1 className="text-5xl font-bold text-center mb-10">Education</h1>
+      <div className="space-y-6 max-w-5xl mx-auto relative">
+        <div className="absolute left-2 top-1 h-full w-1 bg-gradient-to-b from-primary to-secondary rounded"></div>
+        {educationData.map((edu, index) => (
+          <div key={index} className="pl-12">
+            <div className="relative shadow-md rounded-xl p-6 border border-gray-700 hover:shadow-xl">
+              <div class="absolute -left-8 top-0 w-6 h-6 text-2xl">
+                <FaGraduationCap size={20} />
+              </div>
+              <div className="flex justify-between">
+                <h2 className="text-xl font-bold">{edu.degree}</h2>
+                <p className="text-sm italic font-semibold">{edu.duration}</p>
+              </div>
+              <p className="text-md font-semibold">{edu.institution}</p>
+              <p className="mt-2 text-sm">{edu.description}</p>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );

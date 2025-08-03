@@ -1,82 +1,58 @@
-import image1 from "../../assets/projects-3/Screenshot (311).png";
+import React from "react";
+import image1 from "../../assets/projects-2/Screenshot (310).png";
 import { TbDetails, TbWorld } from "react-icons/tb";
 import { IoLogoGithub } from "react-icons/io";
-import { FaNode, FaReact } from "react-icons/fa";
-import Logo from "./project3-logo/Logo";
-import { SiExpress, SiMongodb, SiReactquery, SiStripe } from "react-icons/si";
-import { IoLogoFirebase } from "react-icons/io5";
 
 const Projects3 = () => {
   return (
-    <div className="hero bg-base-300 border border-primary rounded-xl my-10">
-      <div className="hero-content flex-col lg:flex-row gap-8">
-        <div className="h-full w-full lg:w-[500px]">
-          <img src={image1} className="w-full h-full object-cover rounded-md" />
+    <div className="bg-base-300 border border-primary rounded-xl my-10 h">
+      <div className="group">
+        <div className="h-full overflow-hidden p-1">
+          <img
+            src={image1}
+            className="w-full h-full rounded hover:rounded object-cover transition-transform duration-500 group-hover:scale-110"
+          />
         </div>
 
         {/* ✅ Project Description */}
-        <div className="flex-1">
-          <Logo></Logo>
-          <p className="text-lg mb-1">
-            A MERN stack web application that helps organizers create and manage medical camps, and allows participants to join those camps, make payments, and access health resources.
+        <div className="p-5 space-y-4">
+          <h2 className="font font-bold text-3xl text-center">A Garden</h2>
+          <p className="text-md text-center line-clamp-3">
+            A Garden is a community-based gardening platform where users can
+            share gardening tips, read helpful guides, and explore gardener
+            profiles. It’s a space to learn, inspire, and connect through the
+            love of gardening.
           </p>
-          <p>-- Medical Camp Registration & Management System</p>
-          <p>-- Participant Registration with Stripe Payment Integration</p>
-          <p>-- Role-Based Dashboard with Activity Tracking</p>
-          <div className="space-x-3 my-3">
-            <div className="badge badge-info rounded-md">
-              <FaReact />
-              React
-            </div>
-            <div className="badge badge-info rounded-md">
-              <IoLogoFirebase />
-              Firebase
-            </div>
-            <div className="badge badge-info rounded-md">
-              <FaNode />
-              Node.js
-            </div>
-            <div className="badge badge-info rounded-md">
-              <SiExpress/>
-              Express.js
-            </div>
-            <div className="badge badge-info rounded-md">
-              <SiMongodb />
-              MongoDB
-            </div>
-            <div className="badge badge-info rounded-md">
-              <SiReactquery/>
-              TanStack Query
-            </div>
-            <div className="badge badge-info rounded-md">
-              <SiStripe />
-              Stripe Payment
-            </div>
+
+          <div className="flex flex-wrap gap-2">
+            <div className="px-2 py-1 text-xs font-medium border rounded-full bg-secondary text-secondary-foreground">React</div>
+            <div className="px-2 py-1 text-xs font-medium border rounded-full bg-secondary text-secondary-foreground">Firebase</div>
+            <div className="px-2 py-1 text-xs font-medium border rounded-full bg-secondary text-secondary-foreground">Node.js</div>
+            <div className="px-2 py-1 text-xs font-medium border rounded-full bg-secondary text-secondary-foreground">Express.js</div>
+            <div className="px-2 py-1 text-xs font-medium border rounded-full bg-secondary text-secondary-foreground">MongoDB</div>
           </div>
-          <div className="flex gap-5">
+          <div className="flex gap-5 mt-auto items-end">
             <a
-              href="https://medical-center-camp.web.app"
-              className="btn btn-sm btn-primary rounded-xl"
+              href="https://a-garden.web.app/"
+              className="btn btn-sm  btn-primary rounded-full"
             >
               Live Site <TbWorld size={18} />
             </a>
             <a
-              href="#"
-              className="btn btn-sm btn-primary rounded-xl"
+              href="https://github.com/sujanchakma1/a-garden-client"
+              className="btn btn-sm  btn-primary rounded-full"
             >
               GitHub <IoLogoGithub size={18} />
             </a>
             <button
-              onClick={() =>
-                document.getElementById("doctor_phudu").showModal()
-              }
-              className="btn btn-sm btn-primary rounded-xl"
+              onClick={() => document.getElementById("a_garden").showModal()}
+              className="btn btn-sm  btn-primary rounded-full"
             >
               Details <TbDetails size={18} />
             </button>
           </div>
         </div>
-        <dialog id="doctor_phudu" className="modal">
+        <dialog id="a_garden" className="modal">
           <div className="modal-box">
             <form method="dialog">
               {/* if there is a button in form, it will close the modal */}
@@ -85,49 +61,25 @@ const Projects3 = () => {
               </button>
             </form>
             <div className=" py-10 px-4 text-base-content">
-              <Logo></Logo>
+              <h2 className="font font-bold text-3xl">A Garden</h2>
 
               {/* Technologies Used */}
               <section className="mb-6">
-                <h2 className="text-lg">
-                  <span className="text-2xl font-semibold ">
-                    Technologies :
+                <h2 className="">
+                  <span className="text-2xl font-semibold">
+                    Technologies :{" "}
                   </span>{" "}
-                  React JS, Firebase Authentication & Hosting, Node.js, MongoDB, Stripe Payment
+                  React JS, Firebase Authentication & Hosting, Node.js, MongoDB
                 </h2>
               </section>
 
-              {/* Description */}
-              <section className="mb-6">
-                <p>
-                  A MERN stack web application that helps organizers create and manage medical camps, and allows participants to join those camps, make payments, and access health resources.
-                </p>
-              </section>
-
-              {/* Links */}
-              <section className="mb-6">
+              {/* Major Feature */}
+              <section>
+                <h2 className="text-2xl font-semibold mb-2">Major Featured</h2>
                 <ul className="list-disc list-inside ml-4 space-y-1">
-                  <li>
-                    Live Website:{" "}
-                    <a
-                      href="https://medical-center-camp.web.app/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-blue-500 underline"
-                    >
-                      https://medical-center-camp.web.app
-                    </a>
-                  </li>
-                  <li>
-                    GitHub Repository (Client):{" "}
-                    <a
-                      href="#"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-blue-500 underline"
-                    >
-                    </a>
-                  </li>
+                  <li>Garden Tips Sharing </li>
+                  <li>Explore Tips & Guides</li>
+                  <li>Gardener Profiles</li>
                 </ul>
               </section>
               {/* Future Plans */}
@@ -136,9 +88,13 @@ const Projects3 = () => {
                   Future Improvements
                 </h2>
                 <ul className="list-disc list-inside ml-4 space-y-1">
-                  <li>Integrate video consultation or chat feature</li>
-                  <li>Allow patients to review and rate doctors</li>
-                  <li>Add doctor dashboard to manage appointments</li>
+                  <li>
+                    Integrate gardener ranking or badges based on contributions
+                  </li>
+                  <li>
+                    Enable uploading of photos and videos for plant growth
+                    tracking
+                  </li>
                 </ul>
               </section>
             </div>
