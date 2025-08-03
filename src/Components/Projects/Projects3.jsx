@@ -5,7 +5,7 @@ import { IoLogoGithub } from "react-icons/io";
 
 const Projects3 = () => {
   return (
-    <div className="border border-gray-700 rounded-xl my-10 h">
+    <div className="border-2 border-secondary bg-base-200 rounded-xl">
       <div className="group">
         <div className="h-full overflow-hidden p-1">
           <img
@@ -25,44 +25,44 @@ const Projects3 = () => {
           </p>
           <h2 className="text-md font-semibold mb-1">Technologies are use :</h2>
           <div className="flex flex-wrap gap-2">
-            <div className="px-2 py-1 text-xs font-medium border rounded-full bg-secondary text-secondary-foreground">
+            <div className="px-2 py-1 text-xs font-medium border border-secondary rounded-full bg-secondary">
               React
             </div>
-            <div className="px-2 py-1 text-xs font-medium border rounded-full bg-secondary text-secondary-foreground">
+            <div className="px-2 py-1 text-xs font-medium border border-secondary rounded-full bg-secondary">
               Firebase
             </div>
-            <div className="px-2 py-1 text-xs font-medium border rounded-full bg-secondary text-secondary-foreground">
+            <div className="px-2 py-1 text-xs font-medium border border-secondary rounded-full bg-secondary">
               Node.js
             </div>
-            <div className="px-2 py-1 text-xs font-medium border rounded-full bg-secondary text-secondary-foreground">
+            <div className="px-2 py-1 text-xs font-medium border border-secondary rounded-full bg-secondary">
               Express.js
             </div>
-            <div className="px-2 py-1 text-xs font-medium border rounded-full bg-secondary text-secondary-foreground">
+            <div className="px-2 py-1 text-xs font-medium border border-secondary rounded-full bg-secondary">
               MongoDB
             </div>
           </div>
           <div className="flex gap-2">
             <a
               href="https://a-garden.web.app/"
-              className="btn btn-sm  btn-primary rounded-full"
+              className="btn-sm btn rounded-full border border-primary transition-all duration-300 bg-gradient-to-r from-secondary to-primary bg-[length:100%_100%] hover:bg-[length:0%_100%] bg-no-repeat bg-left"
             >
               Live Site <TbWorld size={18} />
             </a>
             <a
               href="https://github.com/sujanchakma1/a-garden-client"
-              className="btn btn-sm  btn-primary rounded-full"
+              className="btn-sm btn rounded-full border border-primary transition-all duration-300 bg-gradient-to-r from-secondary to-primary bg-[length:100%_100%] hover:bg-[length:0%_100%] bg-no-repeat bg-left"
             >
               GitHub <IoLogoGithub size={18} />
             </a>
             <button
               onClick={() => document.getElementById("a_garden").showModal()}
-              className="btn btn-sm  btn-primary rounded-full"
+              className="btn-sm btn rounded-full border border-primary transition-all duration-300 bg-gradient-to-r from-secondary to-primary bg-[length:100%_100%] hover:bg-[length:0%_100%] bg-no-repeat bg-left"
             >
               Details <TbDetails size={18} />
             </button>
           </div>
         </div>
-        <dialog id="a_garden" className="modal">
+        <dialog id="a_garden" className="modal ">
           <div className="modal-box">
             <form method="dialog">
               {/* if there is a button in form, it will close the modal */}
@@ -71,14 +71,14 @@ const Projects3 = () => {
               </button>
             </form>
             <div className=" py-10 px-4 text-base-content">
-              <h2 className="font font-bold text-3xl text-center mb-2">A Garden</h2>
+              <h2 className="font font-bold text-3xl text-center mb-2">
+                A Garden
+              </h2>
 
               {/* Technologies Used */}
               <section className="mb-6">
                 <h2 className="text-sm">
-                  <span className="text-2xl font-semibold">
-                    Technologies:{" "}
-                  </span>{" "}
+                  <span className="text-2xl font-semibold">Technologies: </span>{" "}
                   React JS, Firebase Authentication & Hosting, Node.js, MongoDB
                 </h2>
               </section>

@@ -42,7 +42,7 @@ const Typewriter = ({
 
   return (
     <p className={`inline-block ${className}`}>
-      I'm a {text}
+      I'm a <span className="text-color">{text}</span>
       <span className="animate-pulse text-white"> |</span>
     </p>
   );

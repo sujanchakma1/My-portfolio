@@ -89,7 +89,7 @@ const Skills = () => {
       : allSkills.filter((skill) => skill.category === filter);
 
   return (
-    <section id="skills" className="pt-16">
+    <section id="skills" className="pt-20">
       <div className=" px-4">
         <h2 className="text-5xl font-bold text-center mb-8">Skills</h2>
 
@@ -99,7 +99,7 @@ const Skills = () => {
             <button
               key={cat}
               className={`btn px-5 capitalize rounded-full ${
-                filter === cat ? "btn-primary" : "btn-outline btn-primary"
+                filter === cat ? "bg-gradient-to-r from-secondary to-primary" : "btn-outline btn-primary"
               }`}
               onClick={() => setFilter(cat)}
             >
@@ -113,7 +113,7 @@ const Skills = () => {
           {filteredSkills.map((skill, index) => (
             <div
               key={index}
-              className="border border-gray-700 shadow-md p-4 rounded-lg hover:scale-102 transition-all"
+              className="bg-base-200 shadow-md hover:shadow-xl p-4 rounded-lg hover:scale-102 transition-all"
             >
               <div className="flex items-center gap-3 mb-3">
                 <img
@@ -126,9 +126,9 @@ const Skills = () => {
                   {skill.percentage}%
                 </span>
               </div>
-              <div className="w-full bg-gray-200 h-2 rounded-full">
+              <div className="w-full  h-2 rounded-full">
                 <div
-                  className="h-2 bg-gradient-to-r from-pink-600 to-purple-600 rounded-full"
+                  className="h-1 bg-gradient-to-r from-secondary to-primary rounded-full"
                   style={{ width: `${skill.percentage}%` }}
                 ></div>
               </div>

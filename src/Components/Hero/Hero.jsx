@@ -1,6 +1,6 @@
 import React from "react";
 import me from "../../assets/My Photo/me.jpg";
-import { FaWhatsapp } from "react-icons/fa";
+import { FaLink, FaWhatsapp } from "react-icons/fa";
 import { LuDownload, LuGithub } from "react-icons/lu";
 import { SlSocialLinkedin } from "react-icons/sl";
 import Typewriter from "./Typewriter";
@@ -15,7 +15,7 @@ const Hero = () => {
         </div>
         <div className=" space-y-5">
           <h1 className="text-4xl md:text-5xl font-bold">
-            Hi, I’m Sujan Chakma
+            Hi, I’m <span className="text-color">Sujan Chakma</span>
           </h1>
           <Typewriter text="" className="text-2xl font-medium" />
           <p className="font-medium text-xl">
@@ -26,28 +26,29 @@ const Hero = () => {
           <div className="flex justify-center">
             <div className="flex gap-5">
               <a href="https://wa.me/8801571312226">
-                <FaWhatsapp size={28} />
+                <FaWhatsapp size={28} className="text-green-400"/>
               </a>
               <a href="https://github.com/sujanchakma1">
-                <LuGithub size={28} />
+                <LuGithub size={28} className="text-secondary"/>
               </a>
               <a href="https://www.linkedin.com/in/sujan99">
-                <SlSocialLinkedin size={28} />
+                <SlSocialLinkedin size={28} className="text-blue-600"/>
               </a>
             </div>
           </div>
           <div className="space-x-5">
             <Link to="projects" smooth={true} duration={500}>
-              <button className="btn btn-outline btn-primary rounded-full">
-                View My Projects
+              <button className="btn-hover">
+                View My Projects <FaLink size={18} />
+
               </button>
             </Link>
             <a
               href="/resume.pdf"
               download="Sujan_Chakma_Resume.pdf"
-              className="btn btn-primary rounded-full"
+              className="btn-color"
             >
-              <LuDownload size={18} /> Download Resume
+              Download Resume <LuDownload size={18} /> 
             </a>
           </div>
         </div>

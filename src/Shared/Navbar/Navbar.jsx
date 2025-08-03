@@ -1,12 +1,27 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Logo from "../Logo/Logo";
 import { Link } from "react-scroll";
 import { IoMenu } from "react-icons/io5";
 import { X } from "lucide-react";
-import { MdWork } from "react-icons/md";
+import { MdDarkMode, MdLightMode, MdWork } from "react-icons/md";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [theme, setTheme] = useState("light");
+
+  useEffect(() => {
+    // প্রথম লোডে localStorage থেকে থিম পছন্দ থাকলে সেট করো
+    const savedTheme = localStorage.getItem("theme") || "light";
+    setTheme(savedTheme);
+    document.documentElement.setAttribute("data-theme", savedTheme);
+  }, []);
+
+  const toggleTheme = () => {
+    const newTheme = theme === "light" ? "dark" : "light";
+    setTheme(newTheme);
+    document.documentElement.setAttribute("data-theme", newTheme);
+    localStorage.setItem("theme", newTheme); // ভবিষ্যতে মনে রাখতে
+  };
 
   const toggleDrawer = () => setIsOpen(!isOpen);
   const scrollToTop = () => {
@@ -57,10 +72,21 @@ const Navbar = () => {
           {links}
         </ul>
       </div>
-      <div className="items-center navbar-end flex gap-3">
+      <div className="items-center navbar-end flex gap-5">
+        <button onClick={toggleTheme} className="cursor-pointer">
+          {theme === "light" ? (
+            <>
+              <MdDarkMode size={28} />
+            </>
+          ) : (
+            <>
+              <MdLightMode className="text-yellow-400" size={28} />
+            </>
+          )}
+        </button>
         <Link
           to="contacts"
-          className="btn hidden md:flex btn-primary rounded-full"
+          className="hidden md:flex btn rounded-full border border-secondary transition-all duration-300 bg-gradient-to-r from-secondary to-primary bg-[length:100%_100%] hover:bg-[length:0%_100%] bg-no-repeat bg-left"
           smooth={true}
           duration={500}
         >
@@ -86,12 +112,12 @@ const Navbar = () => {
                 <X className="w-5 h-5" />
               </button>
             </div>
-            <ul className="space-y-3 font-semibold text-center space-y-2">
+            <ul className="space-y-3 font-semibold text-center">
               {links}
               <li>
                 <Link
                   to="contacts"
-                  className="btn btn-primary rounded-full"
+                  className="btn btn-color rounded-full"
                   smooth={true}
                   duration={500}
                 >

@@ -5,7 +5,7 @@ import { IoLogoGithub } from "react-icons/io";
 
 const Projects2 = () => {
   return (
-    <div className="border border-gray-700 rounded-xl my-10">
+    <div className="border-2 border-secondary bg-base-200 rounded-xl">
       <div className="group">
         <div className="h-full overflow-hidden p-1">
           <img
@@ -25,41 +25,41 @@ const Projects2 = () => {
 
           <h2 className="text-md font-semibold mb-1">Technologies are use :</h2>
           <div className="flex flex-wrap gap-2 my-3">
-            <div className="px-2 py-1 text-xs font-medium border rounded-full bg-secondary text-secondary-foreground">
+            <div className="px-2 py-1 text-xs font-medium border border-secondary rounded-full bg-secondary">
               React
             </div>
-            <div className="px-2 py-1 text-xs font-medium border rounded-full bg-secondary text-secondary-foreground">
+            <div className="px-2 py-1 text-xs font-medium border border-secondary rounded-full bg-secondary">
               Firebase
             </div>
-            <div className="px-2 py-1 text-xs font-medium border rounded-full bg-secondary text-secondary-foreground">
+            <div className="px-2 py-1 text-xs font-medium border border-secondary rounded-full bg-secondary">
               Node.js
             </div>
-            <div className="px-2 py-1 text-xs font-medium border rounded-full bg-secondary text-secondary-foreground">
+            <div className="px-2 py-1 text-xs font-medium border border-secondary rounded-full bg-secondary">
               Express.js
             </div>
-            <div className="px-2 py-1 text-xs font-medium border rounded-full bg-secondary text-secondary-foreground">
+            <div className="px-2 py-1 text-xs font-medium border border-secondary rounded-full bg-secondary">
               MongoDB
             </div>
-            <div className="px-2 py-1 text-xs font-medium border rounded-full bg-secondary text-secondary-foreground">
+            <div className="px-2 py-1 text-xs font-medium border border-secondary rounded-full bg-secondary">
               JWT
             </div>
           </div>
           <div className="flex gap-2">
             <a
               href="https://where-is-it-88c14.web.app/"
-              className="btn btn-sm btn-primary rounded-full"
+              className="btn-sm btn rounded-full border border-primary transition-all duration-300 bg-gradient-to-r from-secondary to-primary bg-[length:100%_100%] hover:bg-[length:0%_100%] bg-no-repeat bg-left"
             >
               Live Site <TbWorld size={18} />
             </a>
             <a
               href="https://github.com/sujanchakma1/items-track-client"
-              className="btn btn-sm btn-primary rounded-full"
+              className="btn-sm btn rounded-full border border-primary transition-all duration-300 bg-gradient-to-r from-secondary to-primary bg-[length:100%_100%] hover:bg-[length:0%_100%] bg-no-repeat bg-left"
             >
               GitHub <IoLogoGithub size={18} />
             </a>
             <button
               onClick={() => document.getElementById("items_track").showModal()}
-              className="btn btn-sm btn-primary rounded-full"
+              className="btn-sm btn rounded-full border border-primary transition-all duration-300 bg-gradient-to-r from-secondary to-primary bg-[length:100%_100%] hover:bg-[length:0%_100%] bg-no-repeat bg-left"
             >
               Details <TbDetails size={18} />
             </button>
@@ -74,9 +74,9 @@ const Projects2 = () => {
               </button>
             </form>
             <div className=" py-10 px-4 text-base-content">
-              <div className="flex items-center mb-2">
-                <h2 className="font text-3xl font-bold text-center">ItemsTrack</h2>
-              </div>
+              <h2 className="font text-3xl font-bold text-center">
+                ItemsTrack
+              </h2>
 
               {/* Technologies Used */}
               <section className="mb-6 ">
