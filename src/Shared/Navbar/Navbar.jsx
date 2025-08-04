@@ -188,6 +188,7 @@ const Navbar = () => {
                   className="btn btn-color rounded-full"
                   smooth={true}
                   duration={500}
+                  offset={-80}
                 >
                   <MdWork size={18} /> Hire Me
                 </Link>

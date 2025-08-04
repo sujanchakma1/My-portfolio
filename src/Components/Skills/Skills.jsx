@@ -99,7 +99,7 @@ const Skills = () => {
             <button
               key={cat}
               className={`btn px-5 capitalize rounded-full ${
-                filter === cat ? "bg-gradient-to-r from-secondary to-primary" : "btn-outline btn-primary"
+                filter === cat ? "bg-gradient-to-r from-secondary to-primary border border-secondary" : "btn-outline btn-secondary text-base-content"
               }`}
               onClick={() => setFilter(cat)}
             >
