@@ -89,8 +89,8 @@ const Skills = () => {
       : allSkills.filter((skill) => skill.category === filter);
 
   return (
-    <section id="skills" className="pt-20">
-      <div className=" px-4">
+    <section id="skills" className="pt-10">
+      <div className="">
         <h2 className="text-5xl font-bold text-center mb-8">Skills</h2>
 
         {/* Filter Buttons */}

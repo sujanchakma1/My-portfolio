@@ -7,7 +7,7 @@ import { IoLogoGithub } from "react-icons/io";
 
 const Projects = () => {
   return (
-    <div className="pt-26 px-4 -mb-5" id="projects">
+    <div className="pt-10" id="projects">
       <h1 className="text-5xl font-bold text-center"> Featured Projects</h1>
       <p className="font-medium text-center pt-5 max-w-3xl mx-auto">
         Here are some of my recent projects. Each project was carefully crafted

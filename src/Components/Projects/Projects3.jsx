@@ -5,7 +5,7 @@ import { IoLogoGithub } from "react-icons/io";
 
 const Projects3 = () => {
   return (
-    <div className="border-2 border-secondary bg-base-200 rounded-xl">
+    <div className="border-2 shadow-lg hover:shadow-2xl border-secondary bg-base-200 rounded-xl">
       <div className="group">
         <div className="h-full overflow-hidden p-1">
           <img
@@ -41,7 +41,7 @@ const Projects3 = () => {
               MongoDB
             </div>
           </div>
-          <div className="flex gap-2">
+          <div className="flex justify-between">
             <a
               href="https://a-garden.web.app/"
               className="btn-sm btn rounded-full border border-primary transition-all duration-300 bg-gradient-to-r from-secondary to-primary bg-[length:100%_100%] hover:bg-[length:0%_100%] bg-no-repeat bg-left"
@@ -78,7 +78,8 @@ const Projects3 = () => {
               {/* Technologies Used */}
               <section className="mb-6">
                 <h2 className="text-sm">
-                  <span className="text-2xl font-semibold">Technologies: </span>{" "}
+                  <span className="text-2xl font-semibold">Technologies: </span>
+                  <br />
                   React JS, Firebase Authentication & Hosting, Node.js, MongoDB
                 </h2>
               </section>

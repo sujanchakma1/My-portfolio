@@ -5,7 +5,7 @@ import { IoLogoGithub } from "react-icons/io";
 
 const Projects2 = () => {
   return (
-    <div className="border-2 border-secondary bg-base-200 rounded-xl">
+    <div className="border-2 shadow-lg hover:shadow-2xl border-secondary bg-base-200 rounded-xl">
       <div className="group">
         <div className="h-full overflow-hidden p-1">
           <img
@@ -44,7 +44,7 @@ const Projects2 = () => {
               JWT
             </div>
           </div>
-          <div className="flex gap-2">
+          <div className="flex justify-between">
             <a
               href="https://where-is-it-88c14.web.app/"
               className="btn-sm btn rounded-full border border-primary transition-all duration-300 bg-gradient-to-r from-secondary to-primary bg-[length:100%_100%] hover:bg-[length:0%_100%] bg-no-repeat bg-left"
@@ -81,7 +81,8 @@ const Projects2 = () => {
               {/* Technologies Used */}
               <section className="mb-6 ">
                 <h2 className="text-sm">
-                  <span className="font-semibold text-2xl">Technologies :</span>{" "}
+                  <span className="font-semibold text-2xl">Technologies :</span>
+                  <br />
                   React JS, Firebase Authentication & Hosting, Node.js, MongoDB
                 </h2>
               </section>

@@ -8,7 +8,7 @@ import { Link } from "react-scroll";
 
 const Hero = () => {
   return (
-    <div className="pt-20 max-w-5xl mx-auto -mb-5">
+    <div className="pt-24 max-w-5xl mx-auto">
       <div className="hero-content flex-col text-center">
         <div className="">
           <img src={me} className="max-w-xs rounded-full" />
@@ -37,9 +37,9 @@ const Hero = () => {
             </div>
           </div>
           <div className="space-x-5">
-            <Link to="projects" smooth={true} duration={500}>
+            <Link to="projects" smooth={true} duration={500} offset={-80}>
               <button className="btn-hover">
-                View My Projects <FaLink size={18} />
+                View Projects <FaLink size={18} />
 
               </button>
             </Link>

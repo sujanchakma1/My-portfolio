@@ -42,42 +42,50 @@ const Contact = () => {
   };
 
   return (
-    <div className="pt-26 px-4 -mb-5 text-base-content" id="contacts">
+    <div className="pt-10" id="contacts">
       <h1 className="text-5xl font-bold text-center">Get In touch</h1>
       <p className="font-medium text-center pt-5 max-w-3xl mx-auto mb-8">
         Have a project in mind or want to collaborate? Feel free to reach out.
         I'm always open to discussing new opportunities.
       </p>
-      <div className="hero">
-        <div className="hero-content flex-col lg:flex-row items-start gap-8">
+      <div className="">
+        <div className=" hero-content px-0 flex-col lg:flex-row items-start gap-8">
           {/* Contact Info */}
           <div className="flex-1 w-full border-2 border-secondary bg-base-200 rounded-xl p-6 shadow-lg space-y-8">
             <h2 className="text-2xl font-semibold mb-4 text-center">
               Contact Information
             </h2>
             <div className="flex gap-4 items-center">
-              <FaPhone size={18} />
+              <FaPhone size={21} />
               <div>
                 <p className="font-semibold text-secondary">Phone/WhatsApp </p>{" "}
-                <p className="font-semibold">+8801571312226</p>
+                <a href="tel:+8801571312226" className="font-semibold text-lg">
+                  +8801571312226{" "}
+                </a>
               </div>
             </div>
             <div className="flex gap-3 items-center">
-              <AiOutlineMail size={24} />
+              <AiOutlineMail size={26} />
               <div>
                 <p className="font-semibold text-secondary">Email</p>
-                <p className="font-semibold">sujanckz926@gmail.com</p>
+                <a
+                  href="mailto:sujanckz926@gmail.com"
+                  className="font-semibold text-lg"
+                >
+                  sujanckz926@gmail.com
+                </a>
+                <p></p>
               </div>
             </div>
             <div className="flex gap-3 items-center">
-              <IoLocationOutline size={28} />
+              <IoLocationOutline size={32} />
               <div>
                 <p className="font-semibold text-secondary">Location</p>
-                <p className="font-semibold">Chattogram, Bangladesh</p>
+                <p className="font-semibold text-lg">Chattogram, Bangladesh</p>
               </div>
             </div>
             <div>
-              <h2 className="text-2xl font-semibold my-4">Find Me On</h2>
+              <h2 className="text-2xl font-semibold my-2">Find Me On</h2>
               <div className="flex gap-5">
                 <a href="https://www.facebook.com/share/1LL4u1yggP/">
                   <FiFacebook size={28} className="text-blue-600" />

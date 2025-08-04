@@ -4,12 +4,12 @@
 @plugin "daisyui";
 
 @layer components {
-  html[data-theme='light'] {
-    --color-primary: #C414B2;
+  html[data-theme="light"] {
+    --color-primary: #c414b2;
     --color-secondary: #7976b4;
   }
-  html[data-theme='dark'] {
-    --color-primary: #C414B2;
+  html[data-theme="dark"] {
+    --color-primary: #c414b2;
     --color-secondary: #7976b4;
   }
 }
@@ -18,15 +18,18 @@
   font-family: "Parkinsans", sans-serif;
 }
 
-.btn-hover{
-  @apply btn rounded-full border border-secondary font-semibold transition-all duration-300 bg-gradient-to-r from-secondary to-primary bg-[length:0%_100%] hover:bg-[length:100%_100%] bg-no-repeat bg-left
+.btn-hover {
+  @apply btn rounded-full border border-secondary font-semibold transition-all duration-300 bg-gradient-to-r from-secondary to-primary bg-[length:0%_100%] hover:bg-[length:100%_100%] bg-no-repeat bg-left;
 }
 
-.btn-color{
-  @apply btn rounded-full border border-secondary transition-all duration-300 bg-gradient-to-r from-secondary to-primary bg-[length:100%_100%] hover:bg-[length:0%_100%] bg-no-repeat bg-left
+.btn-color {
+  @apply btn rounded-full border border-secondary transition-all duration-300 bg-gradient-to-r from-secondary to-primary bg-[length:100%_100%] hover:bg-[length:0%_100%] bg-no-repeat bg-left;
 }
 
-.text-color{
-  @apply text-transparent bg-clip-text bg-gradient-to-r from-secondary to-primary
+.text-color {
+  @apply text-transparent bg-clip-text bg-gradient-to-r from-secondary to-primary;
 }
 
+.active-link {
+  @apply text-transparent bg-clip-text bg-gradient-to-r from-secondary to-primary;
+}
