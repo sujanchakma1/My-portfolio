@@ -53,7 +53,7 @@ const Projects1 = () => {
             >
               Live Site <TbWorld size={18} />
             </a>
-            <a href="#" className="btn-sm btn rounded-full border border-primary transition-all duration-300 bg-gradient-to-r from-secondary to-primary bg-[length:100%_100%] hover:bg-[length:0%_100%] bg-no-repeat bg-left">
+            <a href="https://github.com/sujanchakma1/medical-camp-client" className="btn-sm btn rounded-full border border-primary transition-all duration-300 bg-gradient-to-r from-secondary to-primary bg-[length:100%_100%] hover:bg-[length:0%_100%] bg-no-repeat bg-left">
               GitHub <IoLogoGithub size={18} />
             </a>
             <button

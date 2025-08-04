@@ -21,7 +21,7 @@ const educationData = [
 const Education = () => {
   return (
     <div id="education" className="pt-10">
-      <h1 className="text-5xl font-bold text-center mb-10">Education</h1>
+      <h1 className="text-5xl font-bold text-center mb-10"> My Education</h1>
       <div className="space-y-6  relative">
         <div className="absolute left-2 top-0 h-full w-1 bg-gradient-to-b from-primary to-secondary rounded"></div>
         {educationData.map((edu, index) => (

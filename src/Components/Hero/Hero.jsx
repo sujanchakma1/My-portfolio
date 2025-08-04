@@ -1,5 +1,5 @@
 import React from "react";
-import me from "../../assets/My Photo/me.jpg";
+import me from "../../assets/My Photo/me.png";
 import { FaLink, FaWhatsapp } from "react-icons/fa";
 import { LuDownload, LuGithub } from "react-icons/lu";
 import { SlSocialLinkedin } from "react-icons/sl";
@@ -8,12 +8,15 @@ import { Link } from "react-scroll";
 
 const Hero = () => {
   return (
-    <div className="pt-24 max-w-5xl mx-auto">
+    <div className="pt-24">
       <div className="hero-content flex-col text-center">
-        <div className="">
-          <img src={me} className="max-w-xs rounded-full" />
-        </div>
-        <div className=" space-y-5">
+       
+          <img
+            src={me}
+            alt="Hero image"
+            class="max-w-xs object-cover rounded-full"
+          />
+        <div className=" space-y-6">
           <h1 className="text-4xl md:text-5xl font-bold">
             Hi, I’m <span className="text-color">Sujan Chakma</span>
           </h1>
@@ -36,7 +39,7 @@ const Hero = () => {
               </a>
             </div>
           </div>
-          <div className="space-x-5">
+          <div className="space-x-2 md:space-x-5">
             <Link to="projects" smooth={true} duration={1000} offset={-80}>
               <button className="btn-hover">
                 View Projects <FaLink size={18} />

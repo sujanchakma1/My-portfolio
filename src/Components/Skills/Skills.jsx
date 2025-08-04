@@ -91,15 +91,15 @@ const Skills = () => {
   return (
     <section id="skills" className="pt-10">
       <div className="">
-        <h2 className="text-5xl font-bold text-center mb-8">Skills</h2>
+        <h2 className="text-5xl font-bold text-center mb-8"> My Skills</h2>
 
         {/* Filter Buttons */}
         <div className="flex flex-wrap justify-center gap-4 mb-10">
           {["all", "frontend", "backend", "tools"].map((cat) => (
             <button
               key={cat}
-              className={`btn px-5 capitalize rounded-full ${
-                filter === cat ? "bg-gradient-to-r from-secondary to-primary border border-secondary" : "btn-outline btn-secondary text-base-content"
+              className={`btn capitalize rounded-full ${
+                filter === cat ? "bg-gradient-to-r from-secondary to-primary border border-secondary" : "btn-hover"
               }`}
               onClick={() => setFilter(cat)}
             >
