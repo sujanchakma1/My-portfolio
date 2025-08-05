@@ -49,7 +49,7 @@ const About = () => {
                 <button className="btn-hover">Get in Touch</button>
               </Link>
               <a
-                href="/resume.pdf"
+                href="/sujan_chakma_resume.pdf"
                 download="Sujan_Chakma_Resume.pdf"
                 className="btn-color"
               >

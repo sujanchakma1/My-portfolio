@@ -4,12 +4,13 @@ import "./index.css";
 import App from "./App.jsx";
 import { RouterProvider } from "react-router";
 import { Router } from "./Router/Router.jsx";
+import { ToastContainer } from "react-toastify";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <div className="max-w-7xl mx-auto ">
-      <RouterProvider router={Router}>
-      </RouterProvider>
+      <ToastContainer />
+      <RouterProvider router={Router}></RouterProvider>
     </div>
   </StrictMode>
 );

@@ -1,5 +1,5 @@
 import React from "react";
-import me from "../../assets/My Photo/me.png";
+import me from "./My Photo/me.png";
 import { FaLink, FaWhatsapp } from "react-icons/fa";
 import { LuDownload, LuGithub } from "react-icons/lu";
 import { SlSocialLinkedin } from "react-icons/sl";
@@ -10,12 +10,11 @@ const Hero = () => {
   return (
     <div className="pt-24">
       <div className="hero-content flex-col text-center">
-       
-          <img
-            src={me}
-            alt="Hero image"
-            class="max-w-xs object-cover rounded-full"
-          />
+        <img
+          src={me}
+          alt="Hero image"
+          className="max-w-xs object-cover rounded-full"
+        />
         <div className=" space-y-6">
           <h1 className="text-4xl md:text-5xl font-bold">
             Hi, I’m <span className="text-color">Sujan Chakma</span>
@@ -46,7 +45,7 @@ const Hero = () => {
               </button>
             </Link>
             <a
-              href="/resume.pdf"
+              href="/sujan_chakma_resume.pdf"
               download="Sujan_Chakma_Resume.pdf"
               className="btn-color"
             >

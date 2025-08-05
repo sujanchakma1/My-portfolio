@@ -49,18 +49,18 @@ const Projects1 = () => {
           <div className="flex justify-between">
             <a
               href="https://medical-center-camp.web.app"
-              className="btn-sm btn rounded-full border border-primary transition-all duration-300 bg-gradient-to-r from-secondary to-primary bg-[length:100%_100%] hover:bg-[length:0%_100%] bg-no-repeat bg-left"
+              className="btn-sm btn rounded-full border border-secondary transition-all duration-300 bg-gradient-to-r from-secondary to-primary bg-[length:100%_100%] hover:bg-[length:0%_100%] bg-no-repeat bg-left"
             >
               Live Site <TbWorld size={18} />
             </a>
-            <a href="https://github.com/sujanchakma1/medical-camp-client" className="btn-sm btn rounded-full border border-primary transition-all duration-300 bg-gradient-to-r from-secondary to-primary bg-[length:100%_100%] hover:bg-[length:0%_100%] bg-no-repeat bg-left">
+            <a href="https://github.com/sujanchakma1/medical-camp-client" className="btn-sm btn rounded-full border border-secondary transition-all duration-300 bg-gradient-to-r from-secondary to-primary bg-[length:100%_100%] hover:bg-[length:0%_100%] bg-no-repeat bg-left">
               GitHub <IoLogoGithub size={18} />
             </a>
             <button
               onClick={() =>
                 document.getElementById("doctor_phudu").showModal()
               }
-              className="btn-sm btn rounded-full border border-primary transition-all duration-300 bg-gradient-to-r from-secondary to-primary bg-[length:100%_100%] hover:bg-[length:0%_100%] bg-no-repeat bg-left"
+              className="btn-sm btn rounded-full border border-secondary transition-all duration-300 bg-gradient-to-r from-secondary to-primary bg-[length:100%_100%] hover:bg-[length:0%_100%] bg-no-repeat bg-left"
             >
               Details <TbDetails size={18} />
             </button>

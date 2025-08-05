@@ -1,12 +1,12 @@
 import React, { useRef } from "react";
 import emailjs from "emailjs-com";
-import Swal from "sweetalert2";
 import { AiOutlineMail } from "react-icons/ai";
 import { FaInstagram, FaPhone, FaWhatsapp } from "react-icons/fa";
 import { IoLocationOutline } from "react-icons/io5";
 import { LuGithub } from "react-icons/lu";
 import { SlSocialLinkedin } from "react-icons/sl";
 import { FiFacebook, FiSend } from "react-icons/fi";
+import { toast } from "react-toastify";
 
 const Contact = () => {
   const form = useRef();
@@ -23,18 +23,10 @@ const Contact = () => {
       )
       .then(
         () => {
-          Swal.fire({
-            title: "✅ Message sent successfully!",
-            icon: "success",
-            draggable: true,
-          });
+          toast("✅ Message sent successfully!");
         },
         () => {
-          Swal.fire({
-            icon: "error",
-            title: "Oops...",
-            text: "❌ Failed to send message.",
-          });
+          toast("❌ Failed to send message.");
         }
       );
 
