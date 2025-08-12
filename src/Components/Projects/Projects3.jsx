@@ -17,7 +17,7 @@ const Projects3 = () => {
         {/* ✅ Project Description */}
         <div className="p-5 space-y-4">
           <h2 className="font font-bold text-3xl text-center">A Garden</h2>
-          <p className="text-sm text-center line-clamp-3">
+          <p className="text-sm line-clamp-3">
             A Garden is a community-based gardening platform where users can
             share gardening tips, read helpful guides, and explore gardener
             profiles. It’s a space to learn, inspire, and connect through the

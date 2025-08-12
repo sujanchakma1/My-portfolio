@@ -17,7 +17,7 @@ const Projects2 = () => {
         {/* ✅ Project Description */}
         <div className="p-5 space-y-4">
           <h2 className="text-3xl font-bold text-center">ItemsTrack</h2>
-          <p className="text-sm text-center line-clamp-3">
+          <p className="text-sm line-clamp-3">
             ItemsTrack is a simple lost and found item tracking website where
             users can post lost or found items with details and images. It helps
             people reconnect with their lost belongings easily.
@@ -44,7 +44,7 @@ const Projects2 = () => {
               JWT
             </div>
           </div>
-          <div className="flex justify-between">
+          <div className="flex justify-between mt-auto">
             <a
               href="https://where-is-it-88c14.web.app/"
               className="btn-sm btn rounded-full border border-secondary transition-all duration-300 bg-gradient-to-r from-secondary to-primary bg-[length:100%_100%] hover:bg-[length:0%_100%] bg-no-repeat bg-left"

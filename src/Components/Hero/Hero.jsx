@@ -5,6 +5,7 @@ import { LuDownload, LuGithub } from "react-icons/lu";
 import { SlSocialLinkedin } from "react-icons/sl";
 import Typewriter from "./Typewriter";
 import { Link } from "react-scroll";
+import { FiFacebook } from "react-icons/fi";
 
 const Hero = () => {
   return (
@@ -27,6 +28,9 @@ const Hero = () => {
           </p>
           <div className="flex justify-center">
             <div className="flex gap-5">
+              <a href="https://www.facebook.com/share/1LL4u1yggP/">
+                <FiFacebook size={28} className="text-blue-600" />
+              </a>
               <a href="https://wa.me/8801571312226">
                 <FaWhatsapp size={28} className="text-green-400" />
               </a>

@@ -25,24 +25,25 @@ const services = [
 ];
 const About = () => {
   return (
-    <div className="pt-10" id="about">
-      <h1 className="text-5xl font-bold text-center">About Me</h1>
-
+    <div id="about">
       <div className="hero-content flex-col lg:flex-row items-start gap-8 my-10">
         <div className="flex-1 w-full">
-          <div className="About space-y-8 text-center">
-            <h2 className="text-4xl font-semibold mb-8">
-              Passionate Web Developer
-            </h2>
-            <p className="text-lg">
-              I specialize in creating responsive, accessible, and performant
-              web applications using modern technologies.
+          <h1 className="text-5xl font-bold text-center mb-5">About Me</h1>
+          <div className="About space-y-5 text-center">
+            <p className="text-lg text-left font-semibold">
+              My name is Sujan Chakma. I am currently a 3rd-year student at
+              Chittagong Polytechnic, studying Computer Science and Technology.
             </p>
-            <p className="text-lg">
-              I'm passionate about creating elegant solutions to complex
-              problems, and I'm constantly learning new technologies and
-              techniques to stay at the forefront of the ever-evolving web
-              landscape.
+            <p className="text-lg text-left font-semibold">
+              My programming journey started with the Programming Hero web
+              development course, where I began learning from zero. I really
+              enjoy exploring new technologies and libraries to keep improving
+              my skills.
+            </p>
+            <p className="text-lg text-left font-semibold">
+              Outside of programming, I love traveling with friends and playing
+              football. I am a curious and enthusiastic learner who likes taking
+              on challenges and growing every day.
             </p>
             <div className="space-x-5 pt-4">
               <Link to="contacts" smooth={true} duration={1000} offset={-80}>
@@ -59,8 +60,8 @@ const About = () => {
           </div>
         </div>
         <div className="service flex-1 w-full">
-          <div className="grid grid-cols-1 gap-2 w-full">
-            <h2 className="text-4xl font-semibold text-center"> What I Do</h2>
+          <h1 className="text-5xl font-bold text-center mb-5">Services</h1>
+          <div className="grid grid-cols-1 gap-7 w-full">
             {services.map((service, index) => (
               <div
                 className="rounded-xl bg-base-200 p-5 shadow-md hover:shadow-xl hover:scale-102 transition-all flex gap-3 items-center"

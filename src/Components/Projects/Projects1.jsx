@@ -16,7 +16,7 @@ const Projects1 = () => {
         {/* ✅ Project Description */}
         <div className="p-5 space-y-4">
           <h2 className="text-3xl font-bold text-center"> MedCamp</h2>
-          <p className="text-sm text-center line-clamp-3">
+          <p className="text-sm line-clamp-3">
             A MERN stack web application that helps organizers create and manage
             medical camps, and allows participants to join those camps, make
             payments, and access health resources.

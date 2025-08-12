@@ -1,7 +1,6 @@
 import React from "react";
-import { FaFacebook, FaInstagram, FaLinkedin, FaWhatsapp } from "react-icons/fa";
+import { FaWhatsapp } from "react-icons/fa";
 import { FiFacebook } from "react-icons/fi";
-import { IoLogoGithub } from "react-icons/io";
 import { LuGithub } from "react-icons/lu";
 import { SlSocialLinkedin } from "react-icons/sl";
 
@@ -15,9 +14,6 @@ const Footer = () => {
           </a>
           <a href="https://wa.me/8801571312226">
             <FaWhatsapp size={28} className="text-green-400" />
-          </a>
-          <a href="https://www.instagram.com/sujan___chakma?igsh=eWVuOGFpMmNvZ2dk">
-            <FaInstagram size={28} className="text-yellow-900" />
           </a>
           <a href="https://github.com/sujanchakma1">
             <LuGithub size={28} className="text-secondary" />
